@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 public class BrowserOperation {
 	public WebDriver driver;
@@ -21,7 +21,7 @@ public class BrowserOperation {
 	
 	@AfterTest
 	public void CloseBrowser() {
-		driver.close();
+		driver.quit();
 	}
 
 }
